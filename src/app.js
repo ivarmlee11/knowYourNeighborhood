@@ -161,9 +161,6 @@ $(document).ready(function() {
         $('.graph').show();
     });
 
-     $(".datepicker").datepicker();           
-           
-
 });
 
 // line 19 and 20 position.coords.latitude
