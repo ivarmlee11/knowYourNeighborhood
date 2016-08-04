@@ -3,17 +3,83 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body>
-  <div id='map'>
-    
+<!-- <h1>Know My Block</h1> -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Know My Block</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#" id="show">Graph View<span class="sr-only">(current)</span></a></li>
+          <li><a href="#" id="hide">Data View</a></li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li onclick="location.reload()"><a href="#">Clear Map</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Incidents<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+               <li><a href="#" id="getrobbery">Robberies</a></li>
+               <li><a href="#" id="getassault">Assaults</a></li>
+               <li><a href="#" id="getnarcotics">Narcotics</a></li>
+               <li><a href="#" id="getdui">DUI</a></li>
+               <li><a href="#" id="getcarprowl">Car Prowls</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div>
+    <div id='map'></div>
   </div>
-  <div id='hood'>
+  <div class=graph>
+    <img src="src/feverchart_robberies.png">
   </div>
-  <button id="getcrimes"></button>
-  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <div class="graph">
+    <img src="src/robberies_data_barchart_480.png" alt="">
+  </div>
+  <div id="width">
+    <h3 class="text-center">Advanced Search</h3>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Location</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="input-group date" data-provide="datepicker">
+    <input type="text" class="form-control">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+    </div>
+    </div>
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdtnpFV7LM7dnP8qqq9je0nldq-JZINKU&libraries=visualization&callback=initMap"></script>
-  <script src="app.js"></script>
+  <script src="./src/app.js"></script>
 </body>
 
 </html>
