@@ -26,7 +26,7 @@ var marker = new google.maps.Marker({
     map: map
 });
 
-map.data.loadGeoJson('../neighborhoods.geojson');
+map.data.loadGeoJson('src/neighborhoods.geojson');
 
 
 document.getElementById('getrobbery').addEventListener("click", function(){
